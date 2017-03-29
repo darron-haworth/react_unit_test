@@ -35,16 +35,6 @@ export default class FractionSum extends React.Component {
         }
     }
 
-    // calculateFractionSumFunction(firstVal , secondVal) {
-    //     var first = firstVal.split('/');
-    //     var second = secondVal.split('/');
-    //     var answer = mathJs.add(mathJs.fraction(`${first[0]}/${first[1]}`), mathJs.fraction(`${second[0]}/${second[1]}`));
-    //     var answerToString = answer.n + "/" + answer.d
-    //     this.setState({
-    //         answerFromFunction: answerToString
-    //     }) 
-    // }
-
     render() {
         return (
                 <form className="form-inline" name="fractionSum">

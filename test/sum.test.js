@@ -1,10 +1,33 @@
-const sum = require('../lib/sum');
+const arithmaticFuctions = require('../lib/arithmaticFuctions');
 
-// Common Mathers
-
-test('adds 1 + 2 to equels 3', () => {
-    expect(sum(1,2)).toBe(3);
+test('Sum: 1 + 2 to equels 3', () => {
+    expect(arithmaticFuctions.sum(1,2)).toBe(3);
 });
+
+test('Subtract: 10 - 2 to equels 8', () => {
+    expect(arithmaticFuctions.subtract(10,2)).toBe(8);
+});
+
+test('Multiply: 10 * 2 to equels 20', () => {
+    expect(arithmaticFuctions.multiply(10,2)).toBe(20);
+});
+
+test('Devided: 10 / 2 to equels 5', () => {
+    expect(arithmaticFuctions.devided(10,2)).toBe(5);
+});
+
+test('FractionSum: 1/5 + 2/5 to equels 3/5', () => {
+    expect(arithmaticFuctions.fractionSum('1/5','2/5')).toBe('3/5');
+});
+
+//////////////////////////////////////////////////////////////////////
+
+
+// Other Examples from Jest Docs.
+
+
+
+//  Common Mathers  
 
 test('two plus two is four', () => {
   expect(2 + 2).toBe(4);

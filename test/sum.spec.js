@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import {expect} from 'chai';
 
-import Sum from '../lib/sumjsx';
+import Sum from '../lib/sum';
 
 describe('<Sum />', function() {
     it('Addition of :  0 + 0 =  Answer should be 0', function () {

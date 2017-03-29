@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme';
 import {expect} from 'chai';
 
 import Calculation from '../lib/calculation';
-import Sum from '../lib/sumjsx';
+import Sum from '../lib/sum';
 import FractionSum from '../lib/fractionSum';
 
 describe('<Calculation />', function () {
