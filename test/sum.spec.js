@@ -28,4 +28,20 @@ describe('<Sum />', function() {
         wrapper.find('button').simulate('click');
         expect(wrapper.state('answerSum')).to.equal('7')
     });
+
+    it('Addition of :  -3 + 1 =  Answer should be -2', function () {
+        const wrapper = mount(<Sum />);
+        wrapper.setState({firstValue : '-3'});
+        wrapper.setState({secondValue : '1'});
+        wrapper.find('button').simulate('click');
+        expect(wrapper.state('answerSum')).to.equal('-2')
+    });
+
+    it('Addition of : -5 + 8 =  Answer should be 3', function () {
+        const wrapper = mount(<Sum />);
+        wrapper.setState({firstValue : '-5'});
+        wrapper.setState({secondValue : '8'});
+        wrapper.find('button').simulate('click');
+        expect(wrapper.state('answerSum')).to.equal('3')
+    });
 });
