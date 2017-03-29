@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import {expect} from 'chai';
 
-import Sum from '../lib/sum';
+import Sum from '../lib/sumjsx';
 
 describe('<Sum />', function() {
     it('Addition of :  0 + 0 =  Answer should be 0', function () {
@@ -21,12 +21,12 @@ describe('<Sum />', function() {
         expect(wrapper.state('answerSum')).to.equal('7')
     });
 
-    it('Addition of :  3 + 4 =  Answer should be 7', function () {
+    it('Addition of :  -5 + -5 =  Answer should be -10', function () {
         const wrapper = mount(<Sum />);
-        wrapper.setState({firstValue : '3'});
-        wrapper.setState({secondValue : '4'});
+        wrapper.setState({firstValue : '-5'});
+        wrapper.setState({secondValue : '-5'});
         wrapper.find('button').simulate('click');
-        expect(wrapper.state('answerSum')).to.equal('7')
+        expect(wrapper.state('answerSum')).to.equal('-10')
     });
 
     it('Addition of :  -3 + 1 =  Answer should be -2', function () {

@@ -1,6 +1,6 @@
 import React, {propTypes} from 'react';
 import mathJs from 'mathjs';
-import Sum from './sum';
+import Sum from './sumjsx';
 import FractionSum from './fractionSum';
 
 export default class Calculation extends React.Component {

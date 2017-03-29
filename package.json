@@ -5,11 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -w test/helpers/browser.js test/*.spec.js",
-    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --content-base ./"
+    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --content-base ./",
+    "jest": "jest"
   },
   "ava": {
     "require": [
       "./test/helpers/setup-browser-env.js"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test))\\.(js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
     ]
   },
   "author": "Joy Patel <joy.patel@outlook.com>",
@@ -33,9 +45,14 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.2",
     "axios": "^0.15.3",
+    "babel-jest": "^19.0.0",
+    "jest": "^19.0.2",
     "md5": "^2.2.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "regenerator-runtime": "^0.10.3",
+    "ts-jest": "^19.0.6"
   }
 }
