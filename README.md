@@ -10,6 +10,8 @@ Demo Unit Test Project (TDD)
 
 `npm test`
 
+`npm run jest`
+
 ### Run Project 
 
 `npm run dev:hot`
